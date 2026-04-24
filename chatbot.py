@@ -112,6 +112,7 @@ class VanillaRNN:
         d_Wxh = np.zeros_like(self.Wxh)
         d_bh  = np.zeros_like(self.bh)
 
+        
         d_h = self.Why.T @ d_logits  #removed the single inverted commas
 
         for t in reversed(range(n)):
